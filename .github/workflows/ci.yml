@@ -143,7 +143,7 @@ jobs:
         run: |
           outdir="${{ matrix.artifact }}"
           mkdir -p "$outdir"
-          cp -v src/bitcoind src/bitcoin-cli src/bitcoin-tx "$outdir" || true
+          cp -v src/kylacoind src/kylacoin-cli src/kylacoin-tx "$outdir" || true
           tar czf "${outdir}.tar.gz" "$outdir"
           echo "ARTIFACT=${outdir}.tar.gz" >> "$GITHUB_ENV"
 
